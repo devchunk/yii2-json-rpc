@@ -1,6 +1,6 @@
 <?php
 namespace nizsheanez\jsonRpc;
-
+/*TETS*/
 class Exception extends \yii\base\Exception
 {
 
