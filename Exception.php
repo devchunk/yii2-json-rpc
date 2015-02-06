@@ -1,9 +1,6 @@
 <?php
 namespace nizsheanez\jsonRpc;
 
-/**
- * @author sergey.yusupov, alex.sharov
- */
 class Exception extends \yii\base\Exception
 {
 

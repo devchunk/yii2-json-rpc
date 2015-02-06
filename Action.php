@@ -1,4 +1,4 @@
-<?
+<?php
 namespace nizsheanez\jsonRpc;
 
 use Yii;
@@ -7,9 +7,6 @@ use ReflectionMethod;
 use yii\web\HttpException;
 use nizsheanez\jsonRpc\Exception;
 
-/**
- * @author alex.sharov, Konstantin Shuplenkov
- */
 class Action extends \yii\base\Action
 {
     use traits\Serializable;
