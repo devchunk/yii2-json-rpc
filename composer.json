@@ -1,5 +1,5 @@
 {
-    "name": "nizsheanez/yii2-json-rpc",
+    "name": "unlimix/yii2-json-rpc",
     "description": "A lightweight JsonRpc Server and Client for PHP",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
@@ -17,8 +17,8 @@
     },
     "autoload": {
         "psr-0": {
-            "nizsheanez\\jsonRpc\\": ""
+            "unlimix\\jsonRpc\\": ""
         }
     },
-    "target-dir": "nizsheanez/jsonRpc"
+    "target-dir": "unlimix/jsonRpc"
 }
