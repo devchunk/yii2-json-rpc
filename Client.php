@@ -1,7 +1,6 @@
 <?php 
 namespace nizsheanez\jsonRpc;
 
-
 class Client
 {
     use traits\Client;
