@@ -17,8 +17,8 @@
     },
     "autoload": {
         "psr-0": {
-            "unlimix\\jsonRpc\\": "src"
+            "12112\\jsonRpc\\": "src"
         }
     },
-    "target-dir": "unlimix/jsonRpc"
+    "target-dir": "12112/jsonRpc"
 }
