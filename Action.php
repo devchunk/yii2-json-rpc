@@ -1,11 +1,11 @@
 <?php
-namespace nizsheanez\jsonRpc;
+namespace unlimix\jsonRpc;
 
 use Yii;
 use ReflectionClass;
 use ReflectionMethod;
 use yii\web\HttpException;
-use nizsheanez\jsonRpc\Exception;
+use unlimix\jsonRpc\Exception;
 
 class Action extends \yii\base\Action
 {

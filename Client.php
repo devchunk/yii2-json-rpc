@@ -1,5 +1,5 @@
 <?php 
-namespace nizsheanez\jsonRpc;
+namespace unlimix\jsonRpc;
 
 class Client
 {

@@ -1,7 +1,7 @@
 <?php
-namespace nizsheanez\jsonRpc\traits;
+namespace unlimix\jsonRpc\traits;
 
-use nizsheanez\jsonRpc\Exception;
+use unlimix\jsonRpc\Exception;
 
 trait Serializable
 {
