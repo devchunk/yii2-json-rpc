@@ -1,20 +1,20 @@
 {
     "name": "unlimix/yii2-json-rpc",
-    "description": "A lightweight JsonRpc Server and Client for PHP",
-    "minimum-stability": "dev",
+    "description": "description",
     "authors": [
         {
             "name": "morgan",
             "email": "unlimix.pro@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "*"
+				"yiisoft/yii2": "*"
     },
     "autoload": {
         "psr-0": {
-            "unlimix\\jsonRpc\\": ""
+            "unlimix\\jsonRpc\\": "src/"
         }
     }
 }
