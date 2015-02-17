@@ -7,7 +7,7 @@ JsonRpc Server and Client for Yii2
 
 ~~~php
 "require": {
-    "nizsheanez/yii2-json-rpc": "1.*",
+    "unlimix/yii2-json-rpc": "dev-master",
 },
 
 php composer.phar update
@@ -20,7 +20,7 @@ public function actions()
 {
     return array(
         'index' => array(
-            'class' => '\nizsheanez\JsonRpc\Action',
+            'class' => '\unlimix\jsonRpc\Action',
         ),
     );
 }
@@ -32,9 +32,10 @@ public function sum($a, $b) {
 
 3) TEST:
 
+~~~php
 function sendRPC(){
 		$.ajax({
-			url: 'http://www.cis.morgan.lan',
+			url: 'YOUR URL',
 			data: JSON.stringify({
 				"jsonrpc": "2.0",
 				"id": '<?php echo md5(microtime()); ?>',
@@ -50,6 +51,7 @@ function sendRPC(){
 			}
 		});
 	}
+~~~
 
 4) Enjoy!
 
