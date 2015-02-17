@@ -15,6 +15,9 @@
     "autoload": {
         "psr-0": {
             "unlimix\\jsonRpc\\": ""
+        },
+				"psr-4": {
+            "vova07\\fileapi\\": ""
         }
     }
 }

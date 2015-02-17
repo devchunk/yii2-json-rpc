@@ -3,7 +3,6 @@ namespace unlimix\jsonRpc;
 /*TETS*/
 class Exception extends \yii\base\Exception
 {
-
     const PARSE_ERROR = -32700;
     const INVALID_REQUEST = -32600;
     const METHOD_NOT_FOUND = -32601;
@@ -18,15 +17,12 @@ class Exception extends \yii\base\Exception
         parent::__construct($message, $code);
     }
 
-    public function getErrorAsArray()
-    {
-        $result = [
+    public function getErrorAsArray() {
+        $result = array(
             'code' => $this->getCode(),
             'message' => $this->getMessage(),
-        ];
-        if ($this->data !== null) {
-            $result['data'] = $this->data;
-        }
+        );
+        if ($this->data !== null) $result['data'] = $this->data;
         return $result;
     }
 }
