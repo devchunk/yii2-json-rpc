@@ -30,16 +30,26 @@ public function sum($a, $b) {
 }
 ~~~
 
-3) All methods of controller now available as JsonRpc methods, for example see method `sum`:
+3) TEST:
 
-##Usage Client
-
-~~~php
-$client = new \nizsheanez\JsonRpc\Client('http://url/of/webservice');
-
-$response = $client->sum(2, 3);
-echo $response;
-~~~
+function sendRPC(){
+		$.ajax({
+			url: 'http://www.cis.morgan.lan',
+			data: JSON.stringify({
+				"jsonrpc": "2.0",
+				"id": '<?php echo md5(microtime()); ?>',
+				"method": "sum",
+				"params": [1, 2]
+			}),
+			type: 'POST',
+			dataType: 'JSON',
+			contentType: 'application/json-rpc',
+			complete: function (xhr, status) {
+				console.log(xhr);
+				console.log(status);
+			}
+		});
+	}
 
 4) Enjoy!
 
