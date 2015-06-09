@@ -7,6 +7,7 @@ use ReflectionClass;
 use yii\helpers\Json;
 use yii\web\HttpException;
 use unlimix\jsonRpc\Exception;
+use yii\web\Response;
 
 class Action extends \yii\base\Action {
 
@@ -40,6 +41,9 @@ class Action extends \yii\base\Action {
 		if ($this->_output) {
 			$answer['result'] = $this->_output;
 		}
+		
+		Yii::$app->response->format = Response::FORMAT_JSON;
+		
 		echo Json::encode($answer);
 	}
 
