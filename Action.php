@@ -31,10 +31,10 @@ class Action extends \yii\base\Action {
     }
 
     protected function answer($exception = null) {
-        $answer = array(
+        $answer = [
             'jsonrpc' => '2.0',
             'id' => isset($this->_request['id']) ? $this->_request['id'] : null,
-        );
+        ];
         if ($exception) {
             $answer['error'] = $exception->getErrorAsArray();
         }

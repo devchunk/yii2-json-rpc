@@ -2,7 +2,7 @@
 namespace devchunk\jsonRpc;
 
 class Exception extends \yii\base\Exception {
-    
+
     const PARSE_ERROR = -32700;
     const INVALID_REQUEST = -32600;
     const METHOD_NOT_FOUND = -32601;
@@ -17,10 +17,10 @@ class Exception extends \yii\base\Exception {
     }
 
     public function getErrorAsArray() {
-        $result = array(
+        $result = [
             'code' => $this->getCode(),
             'message' => $this->getMessage(),
-        );
+        ];
         if ($this->data !== null) $result['data'] = $this->data;
         return $result;
     }

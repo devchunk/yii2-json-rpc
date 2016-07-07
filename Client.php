@@ -15,21 +15,21 @@ class Client {
 
     public function __call($name, $arguments) {
         $id = md5(microtime());
-        $request = array(
+        $request = [
             'jsonrpc' => '2.0',
             'method' => $name,
             'params' => $arguments,
-            'id' => $id
-        );
+            'id' => $id,
+        ];
 
         $jsonRequest = json_encode($request);
 
-        $ctx = stream_context_create(yii\helpers\ArrayHelper::merge([
-            'http' => array(
+        $ctx = stream_context_create(\yii\helpers\ArrayHelper::merge([
+            'http' => [
                 'method' => 'POST',
                 'header' => "Content-Type: application/json-rpc\r\n",
                 'content' => $jsonRequest
-            )
+            ]
         ], $this->streamContext));
 
         $jsonResponse = file_get_contents($this->url, false, $ctx);
