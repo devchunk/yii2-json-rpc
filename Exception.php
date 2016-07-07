@@ -1,8 +1,8 @@
 <?php
-namespace unlimix\jsonRpc;
-/*TETS*/
-class Exception extends \yii\base\Exception
-{
+namespace devchunk\jsonRpc;
+
+class Exception extends \yii\base\Exception {
+    
     const PARSE_ERROR = -32700;
     const INVALID_REQUEST = -32600;
     const METHOD_NOT_FOUND = -32601;
@@ -11,8 +11,7 @@ class Exception extends \yii\base\Exception
 
     private $data = null;
 
-    public function __construct($message, $code, $data = null)
-    {
+    public function __construct($message, $code, $data = null) {
         $this->data = $data;
         parent::__construct($message, $code);
     }

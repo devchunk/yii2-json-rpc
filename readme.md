@@ -7,53 +7,41 @@ JsonRpc Server and Client for Yii2
 
 ~~~php
 "require": {
-    "unlimix/yii2-json-rpc": "dev-master",
+    "devchunk/yii2-json-rpc": "dev-master",
 },
 
 php composer.phar update
 ~~~
 
-2) Add action to controller
+2) Server:
+
+Add action to controller (e.g. JsonRpcTestController)
 
 ~~~php
 public function actions()
 {
     return array(
         'index' => array(
-            'class' => '\unlimix\jsonRpc\Action',
+            'class' => '\devchunk\jsonRpc\Action',
         ),
     );
 }
 
-public function sum($a, $b) {
-	return $a + $b;
+public function echo($param) {
+	return $param;
 }
 ~~~
 
-3) TEST:
+3) Client:
 
 ~~~php
-function sendRPC(){
-		$.ajax({
-			url: 'YOUR URL',
-			data: JSON.stringify({
-				"jsonrpc": "2.0",
-				"id": '<?php echo md5(microtime()); ?>',
-				"method": "sum",
-				"params": [1, 2]
-			}),
-			type: 'POST',
-			dataType: 'JSON',
-			contentType: 'application/json-rpc',
-			complete: function (xhr, status) {
-				console.log(xhr);
-				console.log(status);
-			}
-		});
-	}
+$rpc = new Client('http://127.0.0.1/json-rpc-test', [
+    'timeout' => 5,
+]);
+
+$result = $rpc->echo("some string");
+
+echo sprintf("RPC result: %s\n", $r);
 ~~~
-
-4) Enjoy!
-
 
 
